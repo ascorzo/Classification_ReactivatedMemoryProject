@@ -1,0 +1,5 @@
+# Matlab files
+*.mat
+# Graphpath files
+*.pzfx
+
