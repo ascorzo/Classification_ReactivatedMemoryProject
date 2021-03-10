@@ -24,7 +24,7 @@ conditions = {'Cue Switched ON';...
 dbstop if error
 
 
-for i = 12:numel(files)
+for i = 1:numel(files)
     
     bands       = (1:1:30);
     crossval    = 15;
