@@ -1,5 +1,5 @@
 
-filesPath       = '/mnt/disk1/sleep/Datasets/Ori/EEGLABFilt_Mastoids_Off_On_200Hz_Oct_NEW_EEGLAB/';
+filesPath       = '/mnt/disk1/sleep/Datasets/Ori_PlaceboNight/EEGLABFilt_Mastoids_Off_On_200Hz_Oct_NEW_EEGLAB/';
 filesOdor       = dir(strcat(filesPath,'*Odor.set'));
 filesVehicle    = dir(strcat(filesPath,'*Sham.set'));
 
@@ -93,7 +93,7 @@ for subj  = 1:numel(filesOdor)
     %% Cross-validation
     
     cfg                 = [];
-    cfg.classifier      = 'lda';
+    cfg.classifier      = 'svm';
     cfg.metric          = 'accuracy';
     cfg.cv              = 'kfold';  % 'kfold' 'leaveout' 'holdout'
     cfg.k               = 5;
@@ -124,7 +124,7 @@ end
  X = AllSubjData.trial(:,:,ival_idx);
 
  cfg                 = [];
- cfg.classifier      = 'lda';
+ cfg.classifier      = 'svm';
  cfg.metric          = 'accuracy';
  cfg.cv              = 'kfold';  % 'kfold' 'leaveout' 'holdout'
  cfg.k               = 5;
@@ -144,7 +144,7 @@ cfg.hyperparameter.lambda   = 'auto';
 
 savepath = '/mnt/disk1/andrea/German_Study/Classification/TrialClassification/';
 
-save(char(strcat(savepath,'lda_Classification')),'acc_All','Accuracy');
+save(char(strcat(savepath,'svm_Classification_OdorMNight')),'acc_All','Accuracy');
 
 function New_x = f_zscore_normalization(x)
     New_x = x;
