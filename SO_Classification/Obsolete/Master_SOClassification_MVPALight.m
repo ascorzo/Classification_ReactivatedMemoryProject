@@ -21,7 +21,7 @@ filesPath       = '/mnt/disk1/andrea/German_Study/Data/Raw/MFF/Sleep/OdorD_Night
 
 %----For Cue Night:
 load('/mnt/disk1/andrea/German_Study/Classification/SO_Classification/SODetection/Channel_Cue_night_FastSSPeak_Scales1_2.5_SO0.5-4_PhCpl0.5-2SlowOsc/13-Nov-2020_21-14-15_AllData.mat')
-filesDavidPath  = '/home/andrea/Desktop/disk1/andrea/German_Study/Data/Filtered-David/CueNight/';
+filesDavidPath  = '/mnt/disk1/sleep/Datasets/Ori/EEGLABFilt_Mastoids_Off_On_200Hz_Oct_NEW_EEGLAB/';
 
 %----For placebo Night
 % load('/gpfs01/born/group/Andrea/ReactivatedConnectivity/SOClassification/SODetection/Channel_Placebo_night_FastSSPeak_Scales1_2.5_SO0.5-4_PhCpl0.5-2SlowOsc/16-Nov-2020_07-40-16_AllData.mat')
